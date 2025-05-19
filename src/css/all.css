@@ -1,0 +1,2112 @@
+/* yv-logistic.CSS 5.02 March 31 2025 by Jan Egil and Borge Refsnes */
+html {
+    box-sizing: border-box
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit
+}
+
+/* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    margin: 0
+}
+
+.yv-black {
+    color: #fff !important;
+    background-color: #000 !important;
+}
+
+.bold-text {
+    font-weight: bold;
+  }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section {
+    display: block
+}
+
+summary {
+    display: list-item
+}
+
+audio,
+canvas,
+progress,
+video {
+    display: inline-block
+}
+
+progress {
+    vertical-align: baseline
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0
+}
+
+[hidden],
+template {
+    display: none
+}
+
+a {
+    background-color: transparent
+}
+
+a:active,
+a:hover {
+    outline-width: 0
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration: underline dotted
+}
+
+b,
+strong {
+    font-weight: bolder
+}
+
+dfn {
+    font-style: italic
+}
+
+mark {
+    background: #ff0;
+    color: #000
+}
+
+small {
+    font-size: 80%
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+
+sub {
+    bottom: -0.25em
+}
+
+sup {
+    top: -0.5em
+}
+
+figure {
+    margin: 1em 40px
+}
+
+img {
+    border-style: none
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible
+}
+
+button,
+input,
+select,
+textarea,
+optgroup {
+    font: inherit;
+    margin: 0
+}
+
+optgroup {
+    font-weight: bold
+}
+
+button,
+input {
+    overflow: visible
+}
+
+button,
+select {
+    text-transform: none
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+    -webkit-appearance: button
+}
+
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+    border-style: none;
+    padding: 0
+}
+
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+    outline: 1px dotted ButtonText
+}
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: .35em .625em .75em
+}
+
+legend {
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal
+}
+
+textarea {
+    overflow: auto
+}
+
+[type=checkbox],
+[type=radio] {
+    padding: 0
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+    height: auto
+}
+
+[type=search] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px
+}
+
+[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit
+}
+
+/* End extract */
+html,
+body {
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5
+}
+
+html {
+    overflow-x: hidden
+}
+
+h1 {
+    font-size: 36px
+}
+
+h2 {
+    font-size: 30px
+}
+
+h3 {
+    font-size: 24px
+}
+
+h4 {
+    font-size: 20px
+}
+
+h5 {
+    font-size: 18px
+}
+
+h6 {
+    font-size: 16px
+}
+
+.yv-logistic-serif {
+    font-family: serif
+}
+
+.yv-logistic-sans-serif {
+    font-family: sans-serif
+}
+
+.yv-logistic-cursive {
+    font-family: cursive
+}
+
+.yv-logistic-monospace {
+    font-family: monospace
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-weight: 400;
+    margin: 10px 0
+}
+
+.yv-logistic-wide {
+    letter-spacing: 4px
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 0
+}
+
+.yv-logistic-image {
+    max-width: 100%;
+    height: auto
+}
+
+img {
+    vertical-align: middle
+}
+
+a {
+    color: inherit
+}
+
+.yv-logistic-table,
+.yv-logistic-table-all {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    display: table
+}
+
+.yv-logistic-table-all {
+    border: 1px solid #ccc
+}
+
+.yv-logistic-bordered tr,
+.yv-logistic-table-all tr {
+    border-bottom: 1px solid #ddd
+}
+
+.yv-logistic-striped tbody tr:nth-child(even) {
+    background-color: #f1f1f1
+}
+
+.yv-logistic-table-all tr:nth-child(odd) {
+    background-color: #fff
+}
+
+.yv-logistic-table-all tr:nth-child(even) {
+    background-color: #f1f1f1
+}
+
+.yv-logistic-hoverable tbody tr:hover,
+.yv-logistic-ul.yv-logistic-hoverable li:hover {
+    background-color: #ccc
+}
+
+.yv-logistic-centered tr th,
+.yv-logistic-centered tr td {
+    text-align: center
+}
+
+.yv-logistic-table td,
+.yv-logistic-table th,
+.yv-logistic-table-all td,
+.yv-logistic-table-all th {
+    padding: 8px 8px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: top
+}
+
+.yv-logistic-table th:first-child,
+.yv-logistic-table td:first-child,
+.yv-logistic-table-all th:first-child,
+.yv-logistic-table-all td:first-child {
+    padding-left: 16px
+}
+
+.yv-logistic-btn,
+.yv-logistic-button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap
+}
+
+.yv-logistic-btn:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.yv-logistic-btn,
+.yv-logistic-button {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.yv-logistic-disabled,
+.yv-logistic-btn:disabled,
+.yv-logistic-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.3
+}
+
+.yv-logistic-disabled *,
+:disabled * {
+    pointer-events: none
+}
+
+.yv-logistic-btn.yv-logistic-disabled:hover,
+.yv-logistic-btn:disabled:hover {
+    box-shadow: none
+}
+
+.yv-logistic-badge,
+.yv-logistic-tag {
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center
+}
+
+.yv-logistic-badge {
+    border-radius: 50%
+}
+
+.yv-logistic-ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0
+}
+
+.yv-logistic-ul li {
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd
+}
+
+.yv-logistic-ul li:last-child {
+    border-bottom: none
+}
+
+.yv-logistic-tooltip,
+.yv-logistic-display-container {
+    position: relative
+}
+
+.yv-logistic-tooltip .yv-logistic-text {
+    display: none
+}
+
+.yv-logistic-tooltip:hover .yv-logistic-text {
+    display: inline-block
+}
+
+.yv-logistic-ripple:active {
+    opacity: 0.5
+}
+
+.yv-logistic-ripple {
+    transition: opacity 0s
+}
+
+.yv-logistic-input {
+    padding: 8px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 100%
+}
+
+.yv-logistic-select {
+    padding: 9px 0;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc
+}
+
+.yv-logistic-dropdown-click,
+.yv-logistic-dropdown-hover {
+    position: relative;
+    display: inline-block;
+    cursor: pointer
+}
+
+.yv-logistic-dropdown-hover:hover .yv-logistic-dropdown-content {
+    display: block
+}
+
+.yv-logistic-dropdown-hover:first-child,
+.yv-logistic-dropdown-click:hover {
+    background-color: #ccc;
+    color: #000
+}
+
+.yv-logistic-dropdown-hover:hover>.yv-logistic-button:first-child,
+.yv-logistic-dropdown-click:hover>.yv-logistic-button:first-child {
+    background-color: #ccc;
+    color: #000
+}
+
+.yv-logistic-dropdown-content {
+    cursor: auto;
+    color: #000;
+    background-color: #fff;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    margin: 0;
+    padding: 0;
+    z-index: 1
+}
+
+.yv-logistic-check,
+.yv-logistic-radio {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 6px
+}
+
+.yv-logistic-sidebar {
+    height: 100%;
+    width: 200px;
+    background-color: #fff;
+    position: fixed !important;
+    z-index: 1;
+    overflow: auto
+}
+
+.yv-logistic-bar-block .yv-logistic-dropdown-hover,
+.yv-logistic-bar-block .yv-logistic-dropdown-click {
+    width: 100%
+}
+
+.yv-logistic-bar-block .yv-logistic-dropdown-hover .yv-logistic-dropdown-content,
+.yv-logistic-bar-block .yv-logistic-dropdown-click .yv-logistic-dropdown-content {
+    min-width: 100%
+}
+
+.yv-logistic-bar-block .yv-logistic-dropdown-hover .yv-logistic-button,
+.yv-logistic-bar-block .yv-logistic-dropdown-click .yv-logistic-button {
+    width: 100%;
+    text-align: left;
+    padding: 8px 16px
+}
+
+.yv-logistic-main,
+#main {
+    transition: margin-left .4s
+}
+
+.yv-logistic-modal {
+    z-index: 3;
+    display: none;
+    padding-top: 100px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4)
+}
+
+.yv-logistic-modal-content {
+    margin: auto;
+    background-color: #fff;
+    position: relative;
+    padding: 0;
+    outline: 0;
+    width: 600px
+}
+
+.yv-logistic-bar {
+    width: 100%;
+    overflow: hidden
+}
+
+.yv-logistic-center .yv-logistic-bar {
+    display: inline-block;
+    width: auto
+}
+
+.yv-logistic-bar .yv-logistic-bar-item {
+    padding: 8px 16px;
+    float: left;
+    width: auto;
+    border: none;
+    display: block;
+    outline: 0;
+    color:#fff
+}
+
+.yv-logistic-bar .yv-logistic-dropdown-hover,
+.yv-logistic-bar .yv-logistic-dropdown-click {
+    position: static;
+    float: left
+}
+
+.yv-logistic-bar .yv-logistic-button {
+    white-space: normal
+}
+
+.yv-logistic-bar-block .yv-logistic-bar-item {
+    width: 100%;
+    display: block;
+    padding: 8px 16px;
+    text-align: left;
+    border: none;
+    white-space: normal;
+    float: none;
+    outline: 0
+}
+
+.yv-logistic-bar-block.yv-logistic-center .yv-logistic-bar-item {
+    text-align: center
+}
+
+.yv-logistic-block {
+    display: block;
+    width: 100%
+}
+
+.yv-logistic-responsive {
+    display: block;
+    overflow-x: auto
+}
+
+.yv-logistic-container:after,
+.yv-logistic-container:before,
+.yv-logistic-panel:after,
+.yv-logistic-panel:before,
+.yv-logistic-row:after,
+.yv-logistic-row:before,
+.yv-logistic-row-padding:after,
+.yv-logistic-row-padding:before,
+.yv-logistic-cell-row:before,
+.yv-logistic-cell-row:after,
+.yv-logistic-clear:after,
+.yv-logistic-clear:before,
+.yv-logistic-bar:before,
+.yv-logistic-bar:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.yv-logistic-col,
+.yv-logistic-half,
+.yv-logistic-third,
+.yv-logistic-twothird,
+.yv-logistic-threequarter,
+.yv-logistic-quarter {
+    float: left;
+    width: 100%
+}
+
+.yv-logistic-col.s1 {
+    width: 8.33333%
+}
+
+.yv-logistic-col.s2 {
+    width: 16.66666%
+}
+
+.yv-logistic-col.s3 {
+    width: 24.99999%
+}
+
+.yv-logistic-col.s4 {
+    width: 33.33333%
+}
+
+.yv-logistic-col.s5 {
+    width: 41.66666%
+}
+
+.yv-logistic-col.s6 {
+    width: 49.99999%
+}
+
+.yv-logistic-col.s7 {
+    width: 58.33333%
+}
+
+.yv-logistic-col.s8 {
+    width: 66.66666%
+}
+
+.yv-logistic-col.s9 {
+    width: 74.99999%
+}
+
+.yv-logistic-col.s10 {
+    width: 83.33333%
+}
+
+.yv-logistic-col.s11 {
+    width: 91.66666%
+}
+
+.yv-logistic-col.s12 {
+    width: 99.99999%
+}
+
+@media (min-width:601px) {
+    .yv-logistic-col.m1 {
+        width: 8.33333%
+    }
+
+    .yv-logistic-col.m2 {
+        width: 16.66666%
+    }
+
+    .yv-logistic-col.m3,
+    .yv-logistic-quarter {
+        width: 24.99999%
+    }
+
+    .yv-logistic-col.m4,
+    .yv-logistic-third {
+        width: 33.33333%
+    }
+
+    .yv-logistic-col.m5 {
+        width: 41.66666%
+    }
+
+    .yv-logistic-col.m6,
+    .yv-logistic-half {
+        width: 49.99999%
+    }
+
+    .yv-logistic-col.m7 {
+        width: 58.33333%
+    }
+
+    .yv-logistic-col.m8,
+    .yv-logistic-twothird {
+        width: 66.66666%
+    }
+
+    .yv-logistic-col.m9,
+    .yv-logistic-threequarter {
+        width: 74.99999%
+    }
+
+    .yv-logistic-col.m10 {
+        width: 83.33333%
+    }
+
+    .yv-logistic-col.m11 {
+        width: 91.66666%
+    }
+
+    .yv-logistic-col.m12 {
+        width: 99.99999%
+    }
+}
+
+@media (min-width:993px) {
+    .yv-logistic-col.l1 {
+        width: 8.33333%
+    }
+
+    .yv-logistic-col.l2 {
+        width: 16.66666%
+    }
+
+    .yv-logistic-col.l3 {
+        width: 24.99999%
+    }
+
+    .yv-logistic-col.l4 {
+        width: 33.33333%
+    }
+
+    .yv-logistic-col.l5 {
+        width: 41.66666%
+    }
+
+    .yv-logistic-col.l6 {
+        width: 49.99999%
+    }
+
+    .yv-logistic-col.l7 {
+        width: 58.33333%
+    }
+
+    .yv-logistic-col.l8 {
+        width: 66.66666%
+    }
+
+    .yv-logistic-col.l9 {
+        width: 74.99999%
+    }
+
+    .yv-logistic-col.l10 {
+        width: 83.33333%
+    }
+
+    .yv-logistic-col.l11 {
+        width: 91.66666%
+    }
+
+    .yv-logistic-col.l12 {
+        width: 99.99999%
+    }
+}
+
+.yv-logistic-rest {
+    overflow: hidden
+}
+
+.yv-logistic-stretch {
+    margin-left: -16px;
+    margin-right: -16px
+}
+
+.yv-logistic-content,
+.yv-logistic-auto {
+    margin-left: auto;
+    margin-right: auto
+}
+
+.yv-logistic-content {
+    max-width: 980px
+}
+
+.yv-logistic-auto {
+    max-width: 1140px
+}
+
+.yv-logistic-cell-row {
+    display: table;
+    width: 100%
+}
+
+.yv-logistic-cell {
+    display: table-cell
+}
+
+.yv-logistic-cell-top {
+    vertical-align: top
+}
+
+.yv-logistic-cell-middle {
+    vertical-align: middle
+}
+
+.yv-logistic-cell-bottom {
+    vertical-align: bottom
+}
+
+.yv-logistic-hide {
+    display: none !important
+}
+
+.yv-logistic-show-block,
+.yv-logistic-show {
+    display: block !important
+}
+
+.yv-logistic-show-inline-block {
+    display: inline-block !important
+}
+
+@media (max-width:1205px) {
+    .yv-logistic-auto {
+        max-width: 95%
+    }
+}
+
+@media (max-width:600px) {
+    .yv-logistic-modal-content {
+        margin: 0 10px;
+        width: auto !important
+    }
+
+    .yv-logistic-modal {
+        padding-top: 30px
+    }
+
+    .yv-logistic-dropdown-hover.yv-logistic-mobile .yv-logistic-dropdown-content,
+    .yv-logistic-dropdown-click.yv-logistic-mobile .yv-logistic-dropdown-content {
+        position: relative
+    }
+
+    .yv-logistic-hide-small {
+        display: none !important
+    }
+
+    .yv-logistic-mobile {
+        display: block;
+        width: 100% !important
+    }
+
+    .yv-logistic-bar-item.yv-logistic-mobile,
+    .yv-logistic-dropdown-hover.yv-logistic-mobile,
+    .yv-logistic-dropdown-click.yv-logistic-mobile {
+        text-align: center
+    }
+
+    .yv-logistic-dropdown-hover.yv-logistic-mobile,
+    .yv-logistic-dropdown-hover.yv-logistic-mobile .yv-logistic-btn,
+    .yv-logistic-dropdown-hover.yv-logistic-mobile .yv-logistic-button,
+    .yv-logistic-dropdown-click.yv-logistic-mobile,
+    .yv-logistic-dropdown-click.yv-logistic-mobile .yv-logistic-btn,
+    .yv-logistic-dropdown-click.yv-logistic-mobile .yv-logistic-button {
+        width: 100%
+    }
+}
+
+@media (max-width:768px) {
+    .yv-logistic-modal-content {
+        width: 500px
+    }
+
+    .yv-logistic-modal {
+        padding-top: 50px
+    }
+}
+
+@media (min-width:993px) {
+    .yv-logistic-modal-content {
+        width: 900px
+    }
+
+    .yv-logistic-hide-large {
+        display: none !important
+    }
+
+    .yv-logistic-sidebar.yv-logistic-collapse {
+        display: block !important
+    }
+}
+
+@media (max-width:992px) and (min-width:601px) {
+    .yv-logistic-hide-medium {
+        display: none !important
+    }
+}
+
+@media (max-width:992px) {
+    .yv-logistic-sidebar.yv-logistic-collapse {
+        display: none
+    }
+
+    .yv-logistic-main {
+        margin-left: 0 !important;
+        margin-right: 0 !important
+    }
+
+    .yv-logistic-auto {
+        max-width: 100%
+    }
+}
+
+.yv-logistic-top,
+.yv-logistic-bottom {
+    position: fixed;
+    width: 100%;
+    z-index: 1
+}
+
+.yv-logistic-top {
+    top: 0
+}
+
+.yv-logistic-bottom {
+    bottom: 0
+}
+
+.yv-logistic-overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2
+}
+
+.yv-logistic-display-topleft {
+    position: absolute;
+    left: 0;
+    top: 0
+}
+
+.yv-logistic-display-topright {
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.yv-logistic-display-bottomleft {
+    position: absolute;
+    left: 0;
+    bottom: 0
+}
+
+.yv-logistic-display-bottomright {
+    position: absolute;
+    right: 0;
+    bottom: 0
+}
+
+.yv-logistic-display-middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+.yv-logistic-display-left {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+    -ms-transform: translate(-0%, -50%)
+}
+
+.yv-logistic-display-right {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%, -50%);
+    -ms-transform: translate(0%, -50%)
+}
+
+.yv-logistic-display-topmiddle {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%)
+}
+
+.yv-logistic-display-bottommiddle {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%)
+}
+
+.yv-logistic-display-container:hover .yv-logistic-display-hover {
+    display: block
+}
+
+.yv-logistic-display-container:hover span.yv-logistic-display-hover {
+    display: inline-block
+}
+
+.yv-logistic-display-hover {
+    display: none
+}
+
+.yv-logistic-display-position {
+    position: absolute
+}
+
+.yv-logistic-circle {
+    border-radius: 50%
+}
+
+.yv-logistic-round-small {
+    border-radius: 2px
+}
+
+.yv-logistic-round,
+.yv-logistic-round-medium {
+    border-radius: 4px
+}
+
+.yv-logistic-round-large {
+    border-radius: 8px
+}
+
+.yv-logistic-round-xlarge {
+    border-radius: 16px
+}
+
+.yv-logistic-round-xxlarge {
+    border-radius: 32px
+}
+
+.yv-logistic-row-padding,
+.yv-logistic-row-padding>.yv-logistic-half,
+.yv-logistic-row-padding>.yv-logistic-third,
+.yv-logistic-row-padding>.yv-logistic-twothird,
+.yv-logistic-row-padding>.yv-logistic-threequarter,
+.yv-logistic-row-padding>.yv-logistic-quarter,
+.yv-logistic-row-padding>.yv-logistic-col {
+    padding: 0 8px
+}
+
+.yv-logistic-container,
+.yv-logistic-panel {
+    padding: 0.01em 16px
+}
+
+.yv-logistic-panel {
+    margin-top: 16px;
+    margin-bottom: 16px
+}
+
+.yv-logistic-grid {
+    display: grid
+}
+
+.yv-logistic-grid-padding {
+    display: grid;
+    gap: 16px
+}
+
+.yv-logistic-flex {
+    display: flex
+}
+
+.yv-logistic-text-center {
+    text-align: center
+}
+
+.yv-logistic-text-bold,
+.yv-logistic-bold {
+    font-weight: bold
+}
+
+.yv-logistic-text-italic,
+.yv-logistic-italic {
+    font-style: italic
+}
+
+.yv-logistic-code,
+.yv-logistic-codespan {
+    font-family: Consolas, "courier new";
+    font-size: 16px
+}
+
+.yv-logistic-code {
+    width: auto;
+    background-color: #fff;
+    padding: 8px 12px;
+    border-left: 4px solid #4CAF50;
+    word-wrap: break-word
+}
+
+.yv-logistic-codespan {
+    color: crimson;
+    background-color: #f1f1f1;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 110%
+}
+
+.yv-logistic-card,
+.yv-logistic-card-2 {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+}
+
+.yv-logistic-card-4,
+.yv-logistic-hover-shadow:hover {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.yv-logistic-spin {
+    animation: yv-logistic-spin 2s infinite linear
+}
+
+@keyframes yv-logistic-spin {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(359deg)
+    }
+}
+
+.yv-logistic-animate-fading {
+    animation: fading 10s infinite
+}
+
+@keyframes fading {
+    0% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+.yv-logistic-animate-opacity {
+    animation: opac 0.8s
+}
+
+@keyframes opac {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.yv-logistic-animate-top {
+    position: relative;
+    animation: animatetop 0.4s
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+.yv-logistic-animate-left {
+    position: relative;
+    animation: animateleft 0.4s
+}
+
+@keyframes animateleft {
+    from {
+        left: -300px;
+        opacity: 0
+    }
+
+    to {
+        left: 0;
+        opacity: 1
+    }
+}
+
+.yv-logistic-animate-right {
+    position: relative;
+    animation: animateright 0.4s
+}
+
+@keyframes animateright {
+    from {
+        right: -300px;
+        opacity: 0
+    }
+
+    to {
+        right: 0;
+        opacity: 1
+    }
+}
+
+.yv-logistic-animate-bottom {
+    position: relative;
+    animation: animatebottom 0.4s
+}
+
+@keyframes animatebottom {
+    from {
+        bottom: -300px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+.yv-logistic-animate-zoom {
+    animation: animatezoom 0.6s
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+.yv-logistic-animate-input {
+    transition: width 0.4s ease-in-out
+}
+
+.yv-logistic-animate-input:focus {
+    width: 100% !important
+}
+
+.yv-logistic-opacity,
+.yv-logistic-hover-opacity:hover {
+    opacity: 0.60
+}
+
+.yv-logistic-opacity-off,
+.yv-logistic-hover-opacity-off:hover {
+    opacity: 1
+}
+
+.yv-logistic-opacity-max {
+    opacity: 0.25
+}
+
+.yv-logistic-opacity-min {
+    opacity: 0.75
+}
+
+.yv-logistic-greyscale-max,
+.yv-logistic-grayscale-max,
+.yv-logistic-hover-greyscale:hover,
+.yv-logistic-hover-grayscale:hover {
+    filter: grayscale(100%)
+}
+
+.yv-logistic-greyscale,
+.yv-logistic-grayscale {
+    filter: grayscale(75%)
+}
+
+.yv-logistic-greyscale-min,
+.yv-logistic-grayscale-min {
+    filter: grayscale(50%)
+}
+
+.yv-logistic-sepia {
+    filter: sepia(75%)
+}
+
+.yv-logistic-sepia-max,
+.yv-logistic-hover-sepia:hover {
+    filter: sepia(100%)
+}
+
+.yv-logistic-sepia-min {
+    filter: sepia(50%)
+}
+
+.yv-logistic-tiny {
+    font-size: 10px !important
+}
+
+.yv-logistic-small {
+    font-size: 12px !important
+}
+
+.yv-logistic-medium {
+    font-size: 15px !important
+}
+
+.yv-logistic-large {
+    font-size: 18px !important
+}
+
+.yv-logistic-xlarge {
+    font-size: 24px !important
+}
+
+.yv-logistic-xxlarge {
+    font-size: 36px !important
+}
+
+.yv-logistic-xxxlarge {
+    font-size: 48px !important
+}
+
+.yv-logistic-jumbo {
+    font-size: 64px !important
+}
+
+.yv-logistic-left-align {
+    text-align: left !important
+}
+
+.yv-logistic-right-align {
+    text-align: right !important
+}
+
+.yv-logistic-justify {
+    text-align: justify !important
+}
+
+.yv-logistic-center {
+    text-align: center !important
+}
+
+.yv-logistic-border-0 {
+    border: 0 !important
+}
+
+.yv-logistic-border {
+    border: 1px solid #ccc !important
+}
+
+.yv-logistic-border-top {
+    border-top: 1px solid #ccc !important
+}
+
+.yv-logistic-border-bottom {
+    border-bottom: 1px solid #ccc !important
+}
+
+.yv-logistic-border-left {
+    border-left: 1px solid #ccc !important
+}
+
+.yv-logistic-border-right {
+    border-right: 1px solid #ccc !important
+}
+
+.yv-logistic-topbar {
+    border-top: 6px solid #ccc !important
+}
+
+.yv-logistic-bottombar {
+    border-bottom: 6px solid #ccc !important
+}
+
+.yv-logistic-leftbar {
+    border-left: 6px solid #ccc !important
+}
+
+.yv-logistic-rightbar {
+    border-right: 6px solid #ccc !important
+}
+
+.yv-logistic-section,
+.yv-logistic-code {
+    margin-top: 16px !important;
+    margin-bottom: 16px !important
+}
+
+.yv-logistic-margin {
+    margin: 16px !important
+}
+
+.yv-logistic-margin-top {
+    margin-top: 16px !important
+}
+
+.yv-logistic-margin-bottom {
+    margin-bottom: 16px !important
+}
+
+.yv-logistic-margin-left {
+    margin-left: 16px !important
+}
+
+.yv-logistic-margin-right {
+    margin-right: 16px !important
+}
+
+.yv-logistic-padding-small {
+    padding: 4px 8px !important
+}
+
+.yv-logistic-padding {
+    padding: 8px 16px !important
+}
+
+.yv-logistic-padding-large {
+    padding: 12px 24px !important
+}
+
+.yv-logistic-padding-16 {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important
+}
+
+.yv-logistic-padding-24 {
+    padding-top: 24px !important;
+    padding-bottom: 24px !important
+}
+
+.yv-logistic-padding-32 {
+    padding-top: 32px !important;
+    padding-bottom: 32px !important
+}
+
+.yv-logistic-padding-48 {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important
+}
+
+.yv-logistic-padding-64 {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important
+}
+
+.yv-logistic-padding-top-64 {
+    padding-top: 64px !important
+}
+
+.yv-logistic-padding-top-48 {
+    padding-top: 48px !important
+}
+
+.yv-logistic-padding-top-32 {
+    padding-top: 32px !important
+}
+
+.yv-logistic-padding-top-24 {
+    padding-top: 24px !important
+}
+
+.yv-logistic-left {
+    float: left !important
+}
+
+.yv-logistic-right {
+    float: right !important
+}
+
+.yv-logistic-button:hover {
+    color: #000 !important;
+    background-color: #ccc !important
+}
+
+.yv-logistic-transparent,
+.yv-logistic-hover-none:hover {
+    background-color: transparent !important
+}
+
+.yv-logistic-hover-none:hover {
+    box-shadow: none !important
+}
+
+.yv-logistic-rtl {
+    direction: rtl
+}
+
+.yv-logistic-ltr {
+    direction: ltr
+}
+
+/* Colors */
+.yv-logistic-amber,
+.yv-logistic-hover-amber:hover {
+    color: #000 !important;
+    background-color: #ffc107 !important
+}
+
+.yv-logistic-aqua,
+.yv-logistic-hover-aqua:hover {
+    color: #000 !important;
+    background-color: #00ffff !important
+}
+
+.yv-logistic-blue,
+.yv-logistic-hover-blue:hover {
+    color: #fff !important;
+    background-color: #2196F3 !important
+}
+
+.yv-logistic-light-blue,
+.yv-logistic-hover-light-blue:hover {
+    color: #000 !important;
+    background-color: #87CEEB !important
+}
+
+.yv-logistic-brown,
+.yv-logistic-hover-brown:hover {
+    color: #fff !important;
+    background-color: #795548 !important
+}
+
+.yv-logistic-cyan,
+.yv-logistic-hover-cyan:hover {
+    color: #000 !important;
+    background-color: #00bcd4 !important
+}
+
+.yv-logistic-blue-grey,
+.yv-logistic-hover-blue-grey:hover,
+.yv-logistic-blue-gray,
+.yv-logistic-hover-blue-gray:hover {
+    color: #fff !important;
+    background-color: #607d8b !important
+}
+
+.yv-logistic-green,
+.yv-logistic-hover-green:hover {
+    color: #fff !important;
+    background-color: #4CAF50 !important
+}
+
+.yv-logistic-light-green,
+.yv-logistic-hover-light-green:hover {
+    color: #000 !important;
+    background-color: #8bc34a !important
+}
+
+.yv-logistic-indigo,
+.yv-logistic-hover-indigo:hover {
+    color: #fff !important;
+    background-color: #3f51b5 !important
+}
+
+.yv-logistic-khaki,
+.yv-logistic-hover-khaki:hover {
+    color: #000 !important;
+    background-color: #f0e68c !important
+}
+
+.yv-logistic-lime,
+.yv-logistic-hover-lime:hover {
+    color: #000 !important;
+    background-color: #cddc39 !important
+}
+
+.yv-logistic-orange,
+.yv-logistic-hover-orange:hover {
+    color: #000 !important;
+    background-color: #ff9800 !important
+}
+
+.yv-logistic-deep-orange,
+.yv-logistic-hover-deep-orange:hover {
+    color: #fff !important;
+    background-color: #ff5722 !important
+}
+
+.yv-logistic-pink,
+.yv-logistic-hover-pink:hover {
+    color: #fff !important;
+    background-color: #e91e63 !important
+}
+
+.yv-logistic-purple,
+.yv-logistic-hover-purple:hover {
+    color: #fff !important;
+    background-color: #9c27b0 !important
+}
+
+.yv-logistic-deep-purple,
+.yv-logistic-hover-deep-purple:hover {
+    color: #fff !important;
+    background-color: #673ab7 !important
+}
+
+.yv-logistic-red,
+.yv-logistic-hover-red:hover {
+    color: #fff !important;
+    background-color: #f44336 !important
+}
+
+.yv-logistic-sand,
+.yv-logistic-hover-sand:hover {
+    color: #000 !important;
+    background-color: #fdf5e6 !important
+}
+
+.yv-logistic-teal,
+.yv-logistic-hover-teal:hover {
+    color: #fff !important;
+    background-color: #009688 !important
+}
+
+.yv-logistic-yellow,
+.yv-logistic-hover-yellow:hover {
+    color: #000 !important;
+    background-color: #ffeb3b !important
+}
+
+.yv-logistic-white,
+.yv-logistic-hover-white:hover {
+    color: #000 !important;
+    background-color: #fff !important
+}
+
+.yv-logistic-black,
+.yv-logistic-hover-black:hover {
+    color: #fff !important;
+    background-color: #000 !important
+}
+
+.yv-logistic-grey,
+.yv-logistic-hover-grey:hover,
+.yv-logistic-gray,
+.yv-logistic-hover-gray:hover {
+    color: #000 !important;
+    background-color: #9e9e9e !important
+}
+
+.yv-logistic-light-grey,
+.yv-logistic-hover-light-grey:hover,
+.yv-logistic-light-gray,
+.yv-logistic-hover-light-gray:hover {
+    color: #000 !important;
+    background-color: #f1f1f1 !important
+}
+
+.yv-logistic-dark-grey,
+.yv-logistic-hover-dark-grey:hover,
+.yv-logistic-dark-gray,
+.yv-logistic-hover-dark-gray:hover {
+    color: #fff !important;
+    background-color: #616161 !important
+}
+
+.yv-logistic-asphalt,
+.yv-logistic-hover-asphalt:hover {
+    color: #fff !important;
+    background-color: #343a40 !important
+}
+
+.yv-logistic-crimson,
+.yv-logistic-hover-crimson:hover {
+    color: #fff !important;
+    background-color: #a20025 !important
+}
+
+.yv-logistic-cobalt,
+yv-logistic-hover-cobalt:hover {
+    color: #fff !important;
+    background-color: #0050ef !important
+}
+
+.yv-logistic-emerald,
+.yv-logistic-hover-emerald:hover {
+    color: #fff !important;
+    background-color: #008a00 !important
+}
+
+.yv-logistic-olive,
+.yv-logistic-hover-olive:hover {
+    color: #fff !important;
+    background-color: #6d8764 !important
+}
+
+.yv-logistic-paper,
+.yv-logistic-hover-paper:hover {
+    color: #000 !important;
+    background-color: #f8f9fa !important
+}
+
+.yv-logistic-sienna,
+.yv-logistic-hover-sienna:hover {
+    color: #fff !important;
+    background-color: #a0522d !important
+}
+
+.yv-logistic-taupe,
+.yv-logistic-hover-taupe:hover {
+    color: #fff !important;
+    background-color: #87794e !important
+}
+
+.yv-logistic-danger {
+    color: #fff !important;
+    background-color: #dd0000 !important
+}
+
+.yv-logistic-note {
+    color: #000 !important;
+    background-color: #fff599 !important
+}
+
+.yv-logistic-info {
+    color: #fff !important;
+    background-color: #0a6fc2 !important
+}
+
+.yv-logistic-warning {
+    color: #000 !important;
+    background-color: #ffb305 !important
+}
+
+.yv-logistic-success {
+    color: #fff !important;
+    background-color: #008a00 !important
+}
+
+.yv-logistic-pale-red,
+.yv-logistic-hover-pale-red:hover {
+    color: #000 !important;
+    background-color: #ffdddd !important
+}
+
+.yv-logistic-pale-green,
+.yv-logistic-hover-pale-green:hover {
+    color: #000 !important;
+    background-color: #ddffdd !important
+}
+
+.yv-logistic-pale-yellow,
+.yv-logistic-hover-pale-yellow:hover {
+    color: #000 !important;
+    background-color: #ffffcc !important
+}
+
+.yv-logistic-pale-blue,
+.yv-logistic-hover-pale-blue:hover {
+    color: #000 !important;
+    background-color: #ddffff !important
+}
+
+.yv-logistic-text-amber,
+.yv-logistic-hover-text-amber:hover {
+    color: #ffc107 !important
+}
+
+.yv-logistic-text-aqua,
+.yv-logistic-hover-text-aqua:hover {
+    color: #00ffff !important
+}
+
+.yv-logistic-text-blue,
+.yv-logistic-hover-text-blue:hover {
+    color: #2196F3 !important
+}
+
+.yv-logistic-text-light-blue,
+.yv-logistic-hover-text-light-blue:hover {
+    color: #87CEEB !important
+}
+
+.yv-logistic-text-brown,
+.yv-logistic-hover-text-brown:hover {
+    color: #795548 !important
+}
+
+.yv-logistic-text-cyan,
+.yv-logistic-hover-text-cyan:hover {
+    color: #00bcd4 !important
+}
+
+.yv-logistic-text-blue-grey,
+.yv-logistic-hover-text-blue-grey:hover,
+.yv-logistic-text-blue-gray,
+.yv-logistic-hover-text-blue-gray:hover {
+    color: #607d8b !important
+}
+
+.yv-logistic-text-green,
+.yv-logistic-hover-text-green:hover {
+    color: #4CAF50 !important
+}
+
+.yv-logistic-text-light-green,
+.yv-logistic-hover-text-light-green:hover {
+    color: #8bc34a !important
+}
+
+.yv-logistic-text-indigo,
+.yv-logistic-hover-text-indigo:hover {
+    color: #3f51b5 !important
+}
+
+.yv-logistic-text-khaki,
+.yv-logistic-hover-text-khaki:hover {
+    color: #b4aa50 !important
+}
+
+.yv-logistic-text-lime,
+.yv-logistic-hover-text-lime:hover {
+    color: #cddc39 !important
+}
+
+.yv-logistic-text-orange,
+.yv-logistic-hover-text-orange:hover {
+    color: #ff9800 !important
+}
+
+.yv-logistic-text-deep-orange,
+.yv-logistic-hover-text-deep-orange:hover {
+    color: #ff5722 !important
+}
+
+.yv-logistic-text-pink,
+.yv-logistic-hover-text-pink:hover {
+    color: #e91e63 !important
+}
+
+.yv-logistic-text-purple,
+.yv-logistic-hover-text-purple:hover {
+    color: #9c27b0 !important
+}
+
+.yv-logistic-text-deep-purple,
+.yv-logistic-hover-text-deep-purple:hover {
+    color: #673ab7 !important
+}
+
+.yv-logistic-text-red,
+.yv-logistic-hover-text-red:hover {
+    color: #f44336 !important
+}
+
+.yv-logistic-text-sand,
+.yv-logistic-hover-text-sand:hover {
+    color: #fdf5e6 !important
+}
+
+.yv-logistic-text-teal,
+.yv-logistic-hover-text-teal:hover {
+    color: #009688 !important
+}
+
+.yv-logistic-text-yellow,
+.yv-logistic-hover-text-yellow:hover {
+    color: #d2be0e !important
+}
+
+.yv-logistic-text-white,
+.yv-logistic-hover-text-white:hover {
+    color: #fff !important
+}
+
+.yv-logistic-text-black,
+.yv-logistic-hover-text-black:hover {
+    color: #000 !important
+}
+
+.yv-logistic-text-grey,
+.yv-logistic-hover-text-grey:hover,
+.yv-logistic-text-gray,
+.yv-logistic-hover-text-gray:hover {
+    color: #757575 !important
+}
+
+.yv-logistic-text-light-grey,
+.yv-logistic-hover-text-light-grey:hover,
+.yv-logistic-text-light-gray,
+.yv-logistic-hover-text-light-gray:hover {
+    color: #f1f1f1 !important
+}
+
+.yv-logistic-text-dark-grey,
+.yv-logistic-hover-text-dark-grey:hover,
+.yv-logistic-text-dark-gray,
+.yv-logistic-hover-text-dark-gray:hover {
+    color: #3a3a3a !important
+}
+
+.yv-logistic-border-amber,
+.yv-logistic-hover-border-amber:hover {
+    border-color: #ffc107 !important
+}
+
+.yv-logistic-border-aqua,
+.yv-logistic-hover-border-aqua:hover {
+    border-color: #00ffff !important
+}
+
+.yv-logistic-border-blue,
+.yv-logistic-hover-border-blue:hover {
+    border-color: #2196F3 !important
+}
+
+.yv-logistic-border-light-blue,
+.yv-logistic-hover-border-light-blue:hover {
+    border-color: #87CEEB !important
+}
+
+.yv-logistic-border-brown,
+.yv-logistic-hover-border-brown:hover {
+    border-color: #795548 !important
+}
+
+.yv-logistic-border-cyan,
+.yv-logistic-hover-border-cyan:hover {
+    border-color: #00bcd4 !important
+}
+
+.yv-logistic-border-blue-grey,
+.yv-logistic-hover-border-blue-grey:hover,
+.yv-logistic-border-blue-gray,
+.yv-logistic-hover-border-blue-gray:hover {
+    border-color: #607d8b !important
+}
+
+.yv-logistic-border-green,
+.yv-logistic-hover-border-green:hover {
+    border-color: #4CAF50 !important
+}
+
+.yv-logistic-border-light-green,
+.yv-logistic-hover-border-light-green:hover {
+    border-color: #8bc34a !important
+}
+
+.yv-logistic-border-indigo,
+.yv-logistic-hover-border-indigo:hover {
+    border-color: #3f51b5 !important
+}
+
+.yv-logistic-border-khaki,
+.yv-logistic-hover-border-khaki:hover {
+    border-color: #f0e68c !important
+}
+
+.yv-logistic-border-lime,
+.yv-logistic-hover-border-lime:hover {
+    border-color: #cddc39 !important
+}
+
+.yv-logistic-border-orange,
+.yv-logistic-hover-border-orange:hover {
+    border-color: #ff9800 !important
+}
+
+.yv-logistic-border-deep-orange,
+.yv-logistic-hover-border-deep-orange:hover {
+    border-color: #ff5722 !important
+}
+
+.yv-logistic-border-pink,
+.yv-logistic-hover-border-pink:hover {
+    border-color: #e91e63 !important
+}
+
+.yv-logistic-border-purple,
+.yv-logistic-hover-border-purple:hover {
+    border-color: #9c27b0 !important
+}
+
+.yv-logistic-border-deep-purple,
+.yv-logistic-hover-border-deep-purple:hover {
+    border-color: #673ab7 !important
+}
+
+.yv-logistic-border-red,
+.yv-logistic-hover-border-red:hover {
+    border-color: #f44336 !important
+}
+
+.yv-logistic-border-sand,
+.yv-logistic-hover-border-sand:hover {
+    border-color: #fdf5e6 !important
+}
+
+.yv-logistic-border-teal,
+.yv-logistic-hover-border-teal:hover {
+    border-color: #009688 !important
+}
+
+.yv-logistic-border-yellow,
+.yv-logistic-hover-border-yellow:hover {
+    border-color: #ffeb3b !important
+}
+
+.yv-logistic-border-white,
+.yv-logistic-hover-border-white:hover {
+    border-color: #fff !important
+}
+
+.yv-logistic-border-black,
+.yv-logistic-hover-border-black:hover {
+    border-color: #000 !important
+}
+
+.yv-logistic-border-grey,
+.yv-logistic-hover-border-grey:hover,
+.yv-logistic-border-gray,
+.yv-logistic-hover-border-gray:hover {
+    border-color: #9e9e9e !important
+}
+
+.yv-logistic-border-light-grey,
+.yv-logistic-hover-border-light-grey:hover,
+.yv-logistic-border-light-gray,
+.yv-logistic-hover-border-light-gray:hover {
+    border-color: #f1f1f1 !important
+}
+
+.yv-logistic-border-dark-grey,
+.yv-logistic-hover-border-dark-grey:hover,
+.yv-logistic-border-dark-gray,
+.yv-logistic-hover-border-dark-gray:hover {
+    border-color: #616161 !important
+}
+
+.yv-logistic-border-pale-red,
+.yv-logistic-hover-border-pale-red:hover {
+    border-color: #ffe7e7 !important
+}
+
+.yv-logistic-border-pale-green,
+.yv-logistic-hover-border-pale-green:hover {
+    border-color: #e7ffe7 !important
+}
+
+.yv-logistic-border-pale-yellow,
+.yv-logistic-hover-border-pale-yellow:hover {
+    border-color: #ffffcc !important
+}
+
+.yv-logistic-border-pale-blue,
+.yv-logistic-hover-border-pale-blue:hover {
+    border-color: #e7ffff !important
+}
