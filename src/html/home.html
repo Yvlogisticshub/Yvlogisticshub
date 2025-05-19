@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>yv-logistic.CSS Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/all.css">
+  <link rel="stylesheet" href="../css/slider.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Raleway", sans-serif
+    }
+
+    body,
+    html {
+      height: 100%;
+      line-height: 1.8;
+    }
+
+    /* Full height image header */
+    .bgimg-1 {
+      background-position: center;
+      background-size: cover;
+      background-image: url("/yv-logisticimages/mac.jpg");
+      min-height: 100%;
+      font-family: "Lato", sans-serif
+    }
+
+    .yv-logistic-bar .yv-logistic-button {
+      padding: 16px;
+    }
+
+    .mySlides {
+      display: none
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar (sit on top) -->
+  <div class="yv-logistic-top yv-black">
+    <div class="yv-logistic-bar  yv-logistic-card" id="myNavbar"> 
+      <a href="#home" class="yv-logistic-bar-item yv-logistic-button yv-logistic-wide" ><img style="max-height: 60px;max-width: inherit" src="../assets/Adobe Express - file.png"></a>
+      <!-- Right-sided navbar links -->
+      <div class="yv-logistic-right yv-logistic-hide-small">
+        <a href="#about" class="yv-logistic-bar-item yv-logistic-button">ABOUT</a>
+        <a href="#work" class="yv-logistic-bar-item yv-logistic-button"><i class="fa fa-th"></i> WORK</a>
+        <a href="#contact" class="yv-logistic-bar-item yv-logistic-button"><i class="fa fa-envelope"></i> CONTACT</a>
+      </div>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+      <a href="javascript:void(0)"
+        class="yv-logistic-bar-item yv-logistic-button yv-logistic-right yv-logistic-hide-large yv-logistic-hide-medium"
+        onclick="yv-logistic_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sidebar on small screens when clicking the menu icon -->
+  <nav
+    class="yv-logistic-sidebar yv-logistic-bar-block yv-logistic-black yv-logistic-card yv-logistic-animate-left yv-logistic-hide-medium yv-logistic-hide-large"
+    style="display:none" id="mySidebar">
+    <a href="javascript:void(0)" onclick="yv-logistic_close()"
+      class="yv-logistic-bar-item yv-logistic-button yv-logistic-large yv-logistic-padding-16">Close ×</a>
+    <a href="#about" onclick="yv-logistic_close()" class="yv-logistic-bar-item yv-logistic-button">ABOUT</a>
+    <a href="#work" onclick="yv-logistic_close()" class="yv-logistic-bar-item yv-logistic-button">WORK</a>
+    <a href="#contact" onclick="yv-logistic_close()" class="yv-logistic-bar-item yv-logistic-button">CONTACT</a>
+  </nav>
+  <div class="w3-content" style="max-width:2000px;margin-top:46px" id="home">
+
+    <!-- Automatic Slideshow Images -->
+    <div class="mySlides w3-display-container w3-center">
+      <img src="../assets/pexels-tom-jackson-1238161-27099095.jpg" style="width:100%">
+      <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small"
+        style="background-color: #ce1919;">
+        <h3><b>24/7 Dedicated Dispatch Support</b></h3>
+        <p><b>24/7 dispatch support for seamless operations and quick load management.</b></p>
+      </div>
+    </div>
+    <div class="mySlides w3-display-container w3-center">
+      <img src="/assets/pexels-elevate-1267325.jpg" style="width:100%">
+      <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small"
+        style="background-color: #ce1919;">
+        <h3><b>High-Paying Load Sourcing</b></h3>
+        <p><b>Discover and secure top-paying freight loads to boost your profits and streamline your business</b></p>
+      </div>
+    </div>
+    <div class="mySlides w3-display-container w3-center">
+      <img src="/assets/pexels-kelly-1179532-4320464.jpg" style="width:100%">
+      <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small"
+        style="background-color: #ce1919;">
+        <h3><b> Dispatching </b></h3>
+        <p><b>Maximizing your profits with strategic and efficient dispatching solutions.</b></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div class="yv-logistic-container" style="padding:128px 16px" id="about">
+    <h3 class="yv-logistic-center bold-text">Built to Boost Your Trucking Profits</h3>
+    <p class="yv-logistic-center yv-logistic-large">At YV Logistics Hub, everything we do is designed with one goal in
+      mind - helping your trucking business earn more while doing less. From finding top-paying loads to handling the
+      paperwork and negotiating with brokers, our expert dispatchers work behind the scenes to keep your trucks moving
+      and your profits growing. We don't just offer dispatch services - we deliver smart, strategic support that
+      maximizes your earning potential and minimizes empty miles. Whether you're an owner-operator or running a fleet,
+      we're here to help you take control of your time, your routes, and your revenue.</p>
+  </div>
+
+  <!-- Work Section -->
+  <div class="yv-logistic-container" style="padding:128px 16px" id="work">
+    <h3 class="yv-logistic-center bold-text">OUR WORK</h3>
+    <p class="yv-logistic-center yv-logistic-large">How We Keep Drivers Moving & Profits Growing</p>
+
+    <div class="yv-logistic-row-padding yv-logistic-center" style="margin-top:64px">
+      <div class="yv-logistic-quarter">
+        <i class="fa fa-truck yv-logistic-margin-bottom yv-logistic-jumbo yv-logistic-center"></i>
+        <p class="yv-logistic-large bold-text">High-Paying Load Sourcing</p>
+        <p>We connect you with top-paying loads tailored to your route preferences and equipment type—no more wasting
+          time on low-rate hauls.</p>
+      </div>
+      <div class="yv-logistic-quarter">
+        <i class="fa fa-phone yv-logistic-margin-bottom yv-logistic-jumbo yv-logistic-center"></i>
+        <p class="yv-logistic-large bold-text">24/7 Dedicated Dispatch Support</p>
+        <p>Our experienced dispatchers are always just a call away, working around the clock to keep your trucks moving
+          and your schedules tight.</p>
+      </div>
+      <div class="yv-logistic-quarter">
+        <i class="fa fa-users yv-logistic-margin-bottom yv-logistic-jumbo yv-logistic-center"></i>
+        <p class="yv-logistic-large bold-text">Broker Negotiation Experts</p>
+        <p>We handle all rate negotiations and broker communications to secure the best deals—so you can focus on
+          driving, not the paperwork.</p>
+      </div>
+      <div class="yv-logistic-quarter">
+        <i class="fa fa-file-text yv-logistic-margin-bottom yv-logistic-jumbo"></i>
+        <p class="yv-logistic-large bold-text">Complete Paperwork Handling</p>
+        <p>From rate confirmations to carrier packets and invoices, we manage all the paperwork so you don’t have to —
+          ensuring everything is submitted on time, organized properly, and fully compliant with industry standards.</p>
+      </div>
+      <div class="yv-logistic-quarter">
+        <i class="fa fa-line-chart yv-logistic-margin-bottom yv-logistic-jumbo"></i>
+        <p class="yv-logistic-large bold-text">Profit-Focused Dispatching</p>
+        <p>Our dispatch strategy minimizes empty miles, reduces downtime, and boosts your bottom line.</p>
+      </div>
+      <div class="yv-logistic-quarter">
+        <i class="fa fa-road yv-logistic-margin-bottom yv-logistic-jumbo"></i>
+        <p class="yv-logistic-large bold-text">Customized Route Planning</p>
+        <p>We plan routes smartly for fuel efficiency, delivery timing, and preferred lanes—aligned with your business
+          goals.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Contact Section -->
+  <div class="yv-logistic-container yv-logistic-light-grey" style="padding:128px 16px" id="contact">
+    <h3 class="yv-logistic-center">CONTACT</h3>
+    <p class="yv-logistic-center yv-logistic-large">Lets get in touch. Send us a message:</p>
+    <div style="margin-top:48px">
+      <p><i class="fa fa-map-marker fa-fw yv-logistic-xxlarge yv-logistic-margin-right"></i> Columbus, Ohio, US</p>
+      <p><i class="fa fa-phone fa-fw yv-logistic-xxlarge yv-logistic-margin-right"></i> <a
+          href="tel:+1 (513)778-8539">Phone: +1(513)778-8539</a></p>
+      <p><i class="fa fa-envelope fa-fw yv-logistic-xxlarge yv-logistic-margin-right"> </i><a
+          href="mailto:info@yvlogisticshub.com">Email: info@yvlogisticshub.com</a> </p>
+      <br>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="yv-logistic-center yv-logistic-black yv-logistic-padding-64">
+    <a href="#home" class="yv-logistic-button yv-logistic-light-grey"><i
+        class="fa fa-arrow-up yv-logistic-margin-right"></i>To the top</a>
+    <!-- <div class="yv-logistic-xlarge yv-logistic-section">
+      <i class="fa fa-facebook-official yv-logistic-hover-opacity"></i>
+      <i class="fa fa-instagram yv-logistic-hover-opacity"></i>
+      <i class="fa fa-snapchat yv-logistic-hover-opacity"></i>
+      <i class="fa fa-pinterest-p yv-logistic-hover-opacity"></i>
+      <i class="fa fa-twitter yv-logistic-hover-opacity"></i>
+      <i class="fa fa-linkedin yv-logistic-hover-opacity"></i>
+    </div> -->
+    <p>Powered by <a href="https://www.yv-logisticschools.com/yv-logisticcss/default.asp" title="yv-logistic"
+        target="_blank" class="yv-logistic-hover-text-green">Yvlostichub</a></p>
+  </footer>
+
+  <script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) { myIndex = 1 }
+      x[myIndex - 1].style.display = "block";
+      setTimeout(carousel, 4000);
+    }
+    // Modal Image Gallery
+    // function onClick(element) {
+    //   document.getElementById("img01").src = element.src;
+    //   document.getElementById("modal01").style.display = "block";
+    //   var captionText = document.getElementById("caption");
+    //   captionText.innerHTML = element.alt;
+    // }
+
+
+    // // Toggle between showing and hiding the sidebar when clicking the menu icon
+    // var mySidebar = document.getElementById("mySidebar");
+
+    // function yv-logistic_open() {
+    //   if (mySidebar.style.display === 'block') {
+    //     mySidebar.style.display = 'none';
+    //   } else {
+    //     mySidebar.style.display = 'block';
+    //   }
+    // }
+
+    // // Close the sidebar with the close button
+    // function yv-logistic_close() {
+    //   mySidebar.style.display = "none";
+    // }
+
+  </script>
+
+</body>
+
+</html>
