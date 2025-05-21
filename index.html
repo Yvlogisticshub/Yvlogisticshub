@@ -62,7 +62,7 @@
 
       <a href="javascript:void(0)"
         class="yv-logistic-bar-item yv-logistic-button yv-logistic-right yv-logistic-hide-large yv-logistic-hide-medium"
-        onclick="yv-logistic_open()">
+        onclick="yvlogistic_open()">
         <i class="fa fa-bars"></i>
       </a>
     </div>
@@ -72,11 +72,11 @@
   <nav
     class="yv-logistic-sidebar yv-logistic-bar-block yv-logistic-black yv-logistic-card yv-logistic-animate-left yv-logistic-hide-medium yv-logistic-hide-large"
     style="display:none" id="mySidebar">
-    <a href="javascript:void(0)" onclick="yv-logistic_close()"
+    <a href="javascript:void(0)" onclick="yvlogistics_close()"
       class="yv-logistic-bar-item yv-logistic-button yv-logistic-large yv-logistic-padding-16">Close ×</a>
-    <a href="#about" onclick="yv-logistic_close()" class="yv-logistic-bar-item yv-logistic-button">ABOUT</a>
-    <a href="#work" onclick="yv-logistic_close()" class="yv-logistic-bar-item yv-logistic-button">WORK</a>
-    <a href="#contact" onclick="yv-logistic_close()" class="yv-logistic-bar-item yv-logistic-button">CONTACT</a>
+    <a href="#about" onclick="yvlogistics_close()" class="yv-logistic-bar-item yv-logistic-button">ABOUT</a>
+    <a href="#work" onclick="yvlogistics_close()" class="yv-logistic-bar-item yv-logistic-button">WORK</a>
+    <a href="#contact" onclick="yvlogistics_close()" class="yv-logistic-bar-item yv-logistic-button">CONTACT</a>
   </nav>
   <div class="w3-content" style="max-width:2000px;margin-top:46px" id="home">
 
@@ -208,30 +208,30 @@
       x[myIndex - 1].style.display = "block";
       setTimeout(carousel, 4000);
     }
-    // Modal Image Gallery
-    // function onClick(element) {
-    //   document.getElementById("img01").src = element.src;
-    //   document.getElementById("modal01").style.display = "block";
-    //   var captionText = document.getElementById("caption");
-    //   captionText.innerHTML = element.alt;
-    // }
+    Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
 
 
-    // // Toggle between showing and hiding the sidebar when clicking the menu icon
-    // var mySidebar = document.getElementById("mySidebar");
+    // Toggle between showing and hiding the sidebar when clicking the menu icon
+    var mySidebar = document.getElementById("mySidebar");
 
-    // function yv-logistic_open() {
-    //   if (mySidebar.style.display === 'block') {
-    //     mySidebar.style.display = 'none';
-    //   } else {
-    //     mySidebar.style.display = 'block';
-    //   }
-    // }
+    function yvlogistic_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+      } else {
+        mySidebar.style.display = 'block';
+      }
+    }
 
-    // // Close the sidebar with the close button
-    // function yv-logistic_close() {
-    //   mySidebar.style.display = "none";
-    // }
+    // Close the sidebar with the close button
+    function yvlogistics_close() {
+      mySidebar.style.display = "none";
+    }
 
   </script>
 
